@@ -23,7 +23,7 @@
     color: white;
 }
 html{
-    font-size: 62.5%;
+    font-size: 60%;
     overflow-x: hidden;
 }
 body{
@@ -69,14 +69,70 @@ nav ul{
     list-style: none;
 }
 ul li{
-    margin: 0 2rem;
+    margin: 0 1.5rem;
 }
 ul li a{
     font-size: 2rem;
     text-decoration: none ;
+    white-space: nowrap;
 }
 .logo{
     text-decoration: none;
 }
+.fa-bars{
+    font-size: 4rem;
+    cursor: pointer;
+    display: none;
+    color: var(--kolor4);
+}
+
+header .fa-times{
+    transform: rotate(180deg);
+}
+
+
+/* media */
+@media(max-width:768px){
+    html{
+        font-size: 50%;
+    }
+    .fa-bars{
+        display: block;
+    }
+    .nav{
+        position: fixed;
+        top: -100%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        box-shadow: 0 0 0 100vh rgba(0, 0, 0, .3);
+        border-radius: 2.5rem !important;
+        border: .3rem solid var(--kolor4) !important;
+        background:var(--kolor5); 
+        width: 90%;
+        opacity: 0;
+    }
+    .nav ul{
+        width: 100%;
+        flex-flow: column;
+        padding: 2rem 0;
+    }
+    .nav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 2rem 0;
+    }
+    .nav ul li a{
+        font-size: 2.5rem;
+        display: inline-block;
+    }
+    .nav-toggle{
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+
+
+
 
 
