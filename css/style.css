@@ -7,6 +7,16 @@
     --kolor3: #F2D0D9; 
     --kolor4: #D96C9F; 
     --kolor5: #F1F2F0; 
+    --fontColor:black;
+}
+.dark-theme{
+    /* Color in Hex */
+    --kolor1: #BF6B82; 
+    --kolor2: #D9A9B6; 
+    --kolor3: #F2D0D9; 
+    --kolor4: #D96C9F; 
+    --kolor5: #0D0D0D; 
+    --fontColor:white;
 }
 
 *{
@@ -53,8 +63,7 @@ header .container .logo span{
     color:var(--kolor4)
 }
 header a{
-    color: black;
-
+    color: var(--fontColor) ;
 }
 header a:hover{
     color:var(--kolor4);
@@ -83,6 +92,11 @@ ul li a{
     font-size: 4rem;
     cursor: pointer;
     display: none;
+    color: var(--kolor4);
+}
+.fa-toggle-on ,.fa-toggle-off{
+    font-size: 3rem;
+    cursor: pointer;
     color: var(--kolor4);
 }
 
