@@ -40,6 +40,36 @@ body{
     background-color: var(--kolor5);
 }
 
+button{
+    height: 3.5rem;
+    width: 12rem;
+    margin: 1.5rem;
+    background-color: var(--kolor4);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    border-radius: 10%;
+}
+button::before{
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color:var(--kolor1);
+    z-index: -1;
+    transition: .3s linear;
+}
+button:hover:before{
+    top: 0;
+}
+
+
 header{
     width: 100%;
     position: fixed;
@@ -48,6 +78,7 @@ header{
     padding: 2rem 1rem;
     z-index: 100;
     text-transform: capitalize;
+    background-color: var(--kolor5);
 }
 header .container{
     display: flex;
@@ -103,6 +134,49 @@ ul li a{
 header .fa-times{
     transform: rotate(180deg);
 }
+
+.welcome-h1 h1{
+    font-size: 3.5rem;
+    color: var(--fontColor);
+    padding: 0 2rem ;
+}
+.welcome-h1 span{
+    font-size: 3.5rem;
+    color: var(--kolor4);
+}
+.welcome-h1 p{
+    font-size: 2rem;
+    color: var(--fontColor);
+    
+}
+.offert-1{
+    margin: 1rem 0;
+}
+.offert-1 .qube{
+    font-size: 2rem;
+    color: var(--fontColor);
+}
+.offert-1 .qube h2{
+    font-size: 3rem;
+    color: var(--kolor4);
+}
+
+.offert-1 .qube i{
+    font-size: 3rem;
+    padding: 0 3rem;
+    color: var(--kolor4);
+}
+.offert-1 .qube p{
+    padding-left: 9rem;
+}
+.offert-2{
+    text-align: right;
+}
+.offert-2 p{
+    padding-right: 9rem;
+}
+
+
 
 
 /* media */
