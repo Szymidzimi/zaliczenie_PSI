@@ -80,6 +80,10 @@ header{
     text-transform: capitalize;
     background-color: var(--kolor5);
 }
+.header-act{
+    box-shadow: 0 .5rem .5rem rgba(217, 108, 159, 0.4);
+    padding: 1.2rem 0;
+}
 header .container{
     display: flex;
     align-items: center;
@@ -175,9 +179,35 @@ header .fa-times{
 .offert-2 p{
     padding-right: 9rem;
 }
-
-
-
+/* slider */
+.slider{
+    height: 50vh;
+    position: relative;
+}
+.slider img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+img.actv{
+    opacity: 1;
+}
+.nextt ,.provv{
+    color: var(--kolor4);
+    font-size: 3rem;
+    position: absolute;
+    top:50%;
+}
+.nextt{
+    right: 3rem;
+}
+.provv{
+    left: 3rem;
+}
 
 /* media */
 @media(max-width:768px){
