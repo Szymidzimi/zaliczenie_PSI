@@ -8,15 +8,17 @@
     --kolor4: #D96C9F; 
     --kolor5: #F1F2F0; 
     --fontColor:black;
+    --kolorOpinie:rgb(34, 31, 31);
 }
 .dark-theme{
     /* Color in Hex */
     --kolor1: #BF6B82; 
     --kolor2: #D9A9B6; 
-    --kolor3: #F2D0D9; 
+    --kolor3: #4d4b4c; 
     --kolor4: #D96C9F; 
     --kolor5: #0D0D0D; 
     --fontColor:white;
+    --kolorOpinie:#F1F2F0;
 }
 
 *{
@@ -26,7 +28,7 @@
     border: none !important;
     outline: none !important;
     font-weight: 400;
-    transition: all .3s linear;
+    transition: all .2s linear;
 }
 *::selection{
     background: black;
@@ -40,7 +42,7 @@ body{
     background-color: var(--kolor5);
 }
 
-button{
+.button{
     height: 3.5rem;
     width: 12rem;
     margin: 1.5rem;
@@ -181,8 +183,9 @@ header .fa-times{
 }
 /* slider */
 .slider{
-    height: 50vh;
+    height: 90vh;
     position: relative;
+    margin: 2rem 1rem;
 }
 .slider img{
     object-fit: cover;
@@ -200,7 +203,9 @@ img.actv{
     color: var(--kolor4);
     font-size: 3rem;
     position: absolute;
-    top:50%;
+    top:0;
+    height: 100%;
+    width: 30%;
 }
 .nextt{
     right: 3rem;
@@ -208,7 +213,127 @@ img.actv{
 .provv{
     left: 3rem;
 }
+.nx,.pr{
+    position: absolute;
+    top: 50%;
+}
+.nx{
+    right: 0;
+}
 
+.opinions{
+    background: url('../images/opinions/background.jpg'), linear-gradient(var(--kolorOpinie),var(--kolorOpinie)) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+.opinions h1{
+    color: var(--kolor4);
+    padding-top: 5rem;
+}
+.opinions .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 4rem;
+}
+.opinions .box{
+    background-color: var(--kolor5);
+    width: 35rem;
+    margin: 5rem 1.5rem;
+    padding: 1rem;
+    position: relative;
+ 
+}
+.opinions .box img{
+    position: absolute;
+    bottom: -7rem;
+    left: -1rem;
+    height: 6rem;
+    width: 6rem;
+    border-radius:50% ;
+    object-fit: cover;
+}
+.opinions .box p{
+    font-size: 1.4rem;
+    color: var(--fontColor);
+
+}
+.opinions .box h4{
+    text-align: end;
+    color: var(--kolor1);
+    font-size: 1.7rem;
+}
+.opinions .box span{
+    display: block;
+    text-align: end;
+    color: var(--fontColor);
+    font-size: 1.5rem;
+}
+.counter .box-container, .contact .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+}
+.counter .box-container .box,.contact .box-container .box{
+    margin: 3rem 10rem;
+    text-align: center;
+}
+.counter .box-container .box i, .contact .box-container .box i{
+    color: var(--kolor4);
+    font-size: 4rem;
+}
+.counter .box-container .box span,.contact .box-container .box span{
+    display: block;
+    color: var(--fontColor);
+    font-size: 4rem;
+    padding: 1rem 0;
+}
+.counter .box-container .box h4,.contact .box-container .box h4{
+    color: var(--kolor4);
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+.contact{
+    background: var(--kolor3);
+    padding: 3rem 2rem;
+}
+.contact h1{
+    color: var(--kolor4);
+}
+.contact form{
+    text-align: center;
+}
+.contact form .inputs{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact form .inputs input ,select{
+    height: 3.5rem;
+    margin: 1rem 0;
+    width: 49%;
+    padding: 0 1rem;
+    font-size: 2rem;
+    color: var(--fontColor);
+}
+.contact form textarea{
+    height: 20rem;
+    resize: none;
+    padding: 1rem;
+    width: 100%;
+}
+.mail h4{
+    text-transform: none !important;
+}
+.contact h4{
+    margin-top: 2rem;
+}
+a{
+    text-decoration: none;
+    color: var(--kolor4);
+}
 /* media */
 @media(max-width:768px){
     html{
@@ -246,6 +371,9 @@ img.actv{
     .nav-toggle{
         top: 50%;
         opacity: 1;
+    }
+    .contact form .inputs input ,select{
+        width: 100%;
     }
 }
 
