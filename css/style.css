@@ -9,6 +9,7 @@
     --kolor5: #F1F2F0; 
     --fontColor:black;
     --kolorOpinie:rgb(34, 31, 31);
+    --arrowColor: #f94154;
 }
 .dark-theme{
     /* Color in Hex */
@@ -28,7 +29,7 @@
     border: none !important;
     outline: none !important;
     font-weight: 400;
-    transition: all .2s linear;
+    transition: all .3s linear;
 }
 *::selection{
     background: black;
@@ -55,7 +56,7 @@ body{
     overflow: hidden;
     border-radius: 10%;
 }
-button::before{
+.button::before{
     content: '';
     position: absolute;
     top: -100%;
@@ -66,11 +67,9 @@ button::before{
     z-index: -1;
     transition: .3s linear;
 }
-button:hover:before{
+.button:hover:before{
     top: 0;
 }
-
-
 header{
     width: 100%;
     position: fixed;
@@ -199,7 +198,7 @@ img.actv{
     opacity: 1;
 }
 .nextt ,.provv{
-    color: var(--kolor4);
+    color: var(--arrowColor);
     font-size: 3rem;
     position: absolute;
     top:0;
@@ -231,7 +230,7 @@ img.actv{
 }
 .opinions h1, .offert h1{
     color: var(--kolor4);
-    padding-top: 5rem;
+    padding-top: 9rem;
 }
 .opinions .box-container{
     display: flex;
@@ -305,6 +304,7 @@ img.actv{
 }
 .contact h1{
     color: var(--kolor4);
+    padding-top: 6rem;
 }
 .contact form{
     text-align: center;
@@ -362,7 +362,7 @@ footer .box{
     text-align: center;
 }
 footer .box i{
-    color: var(--kolor4);
+    color: var(--arrowColor);
     font-size: 6rem;
 }
 footer .box i:hover{
@@ -383,7 +383,18 @@ footer h4{
     color: var(--fontColor) !important;
     font-size: 3rem;
 }
-
+#btn-back-to-top {
+    background:none;
+    font-size: 5rem;
+    color: var(--arrowColor);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+  }
+#btn-back-to-top:hover{
+    color: red;
+}
 
 /* media */
 @media(max-width:768px){
@@ -427,11 +438,3 @@ footer h4{
         width: 100%;
     }
 }
-
-
-
-
-
-
-
-

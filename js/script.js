@@ -3,7 +3,9 @@ const imgs=document.querySelectorAll('.photos');
 const prov=document.querySelector('.provv');
 const next=document.querySelector('.nextt');
 const copyRight=document.querySelector('#copyright');
+const mybutton = document.querySelector("#btn-back-to-top");
 
+//////////////////////slider/////////////////////
 let krok=0;
 let koniec=imgs.length;
 
@@ -32,7 +34,7 @@ setInterval(()=>{
     slider();
     imgs[krok].classList.add('actv');
 },4000)
-// zmiana motywu na ciemnmy
+/////////////////////////////////// zmiana motywu na ciemnmy///////////////////////////
 theme.addEventListener('click',()=>{
     document.body.classList.toggle('dark-theme');
     if(theme.classList.contains('fa-toggle-on')){
@@ -45,7 +47,7 @@ theme.addEventListener('click',()=>{
     }
 })
 
-//menu zwijalne oraz reakcja na scroll
+//////////////////////////menu zwijalne oraz reakcja na scroll jQuerry////////////////////////////
 $(document).ready(function(){
     $('.fa-bars').click(function(){
         $(this).toggleClass('fa-times');
@@ -64,6 +66,28 @@ $(document).ready(function(){
         }
     });
 });
-// data
+/////////////////////////////////////////data///////////////////////////////
 const currentYr=new Date().getFullYear();
 copyRight.textContent=currentYr;
+
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+/////////////////////////////////////przycisk up//////////////////////////
+function scrollFunction() {
+  if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600){
+    mybutton.style.display = "block";
+  } 
+  else {
+    mybutton.style.display = "none";
+  }
+}
+function backToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+mybutton.addEventListener("click", backToTop);
+
