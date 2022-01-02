@@ -13,7 +13,7 @@
 .dark-theme{
     /* Color in Hex */
     --kolor1: #BF6B82; 
-    --kolor2: #D9A9B6; 
+    --kolor2: #5c4b4f; 
     --kolor3: #4d4b4c; 
     --kolor4: #D96C9F; 
     --kolor5: #0D0D0D; 
@@ -41,7 +41,6 @@ html{
 body{
     background-color: var(--kolor5);
 }
-
 .button{
     height: 3.5rem;
     width: 12rem;
@@ -96,13 +95,13 @@ header .container .logo{
     font-size: 3rem;
 
 }
-header .container .logo span{
+header .container .logo span,footer .logo span{
     color:var(--kolor4)
 }
-header a{
+header a,footer .logo{
     color: var(--fontColor) ;
 }
-header a:hover{
+header a:hover, footer.logo a:hover{
     color:var(--kolor4);
     
 }
@@ -183,7 +182,7 @@ header .fa-times{
 }
 /* slider */
 .slider{
-    height: 90vh;
+    height: 80vh;
     position: relative;
     margin: 2rem 1rem;
 }
@@ -217,8 +216,11 @@ img.actv{
     position: absolute;
     top: 50%;
 }
+.pr{
+    left: 3rem;
+}
 .nx{
-    right: 0;
+    right: 3rem;
 }
 
 .opinions{
@@ -227,7 +229,7 @@ img.actv{
     background-position: center;
     background-blend-mode: multiply;
 }
-.opinions h1{
+.opinions h1, .offert h1{
     color: var(--kolor4);
     padding-top: 5rem;
 }
@@ -272,12 +274,14 @@ img.actv{
 }
 .counter .box-container, .contact .box-container{
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
+    align-items: center;
     flex-wrap: wrap;
-    padding: 3rem 0;
+    padding: 2rem 0;
 }
 .counter .box-container .box,.contact .box-container .box{
-    margin: 3rem 10rem;
+    min-width: 28%;
+    margin: 3rem 3rem;
     text-align: center;
 }
 .counter .box-container .box i, .contact .box-container .box i{
@@ -334,6 +338,53 @@ a{
     text-decoration: none;
     color: var(--kolor4);
 }
+a:hover{
+    color: var(--kolor4);
+}
+footer{
+    background: var(--kolor2);
+}
+footer p{
+    color: var(--fontColor);
+    font-size: 1.5rem;
+    padding: 1rem 0;
+
+}
+.socialmedia{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+footer .box{
+    min-width: 28%;
+    margin: auto;
+    text-align: center;
+}
+footer .box i{
+    color: var(--kolor4);
+    font-size: 6rem;
+}
+footer .box i:hover{
+    opacity: 0.7;
+    transform: translateY(-10px);
+    transition: 0.2s ease;
+}
+.copy-right{
+    color: var(--fontColor);
+    width: 90%;
+    margin: 0;
+    padding: 2rem 0;
+    padding-bottom: 4rem;
+    border-top: .1rem solid var(--fontColor) !important;
+}
+footer h4{
+    margin-top: 4rem;
+    color: var(--fontColor) !important;
+    font-size: 3rem;
+}
+
+
 /* media */
 @media(max-width:768px){
     html{
@@ -376,6 +427,8 @@ a{
         width: 100%;
     }
 }
+
+
 
 
 

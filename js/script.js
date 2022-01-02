@@ -2,6 +2,7 @@ const theme=document.querySelector('#swith');
 const imgs=document.querySelectorAll('.photos');
 const prov=document.querySelector('.provv');
 const next=document.querySelector('.nextt');
+const copyRight=document.querySelector('#copyright');
 
 let krok=0;
 let koniec=imgs.length;
@@ -63,3 +64,6 @@ $(document).ready(function(){
         }
     });
 });
+// data
+const currentYr=new Date().getFullYear();
+copyRight.textContent=currentYr;
