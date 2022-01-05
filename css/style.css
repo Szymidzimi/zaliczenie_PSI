@@ -38,6 +38,7 @@
 html{
     font-size: 60%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 body{
     background-color: var(--kolor5);

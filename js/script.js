@@ -70,11 +70,6 @@ $(document).ready(function(){
 const currentYr=new Date().getFullYear();
 copyRight.textContent=currentYr;
 
-
-window.onscroll = function () {
-  scrollFunction();
-};
-
 /////////////////////////////////////przycisk up//////////////////////////
 function scrollFunction() {
   if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600){
@@ -83,11 +78,34 @@ function scrollFunction() {
   else {
     mybutton.style.display = "none";
   }
+  
 }
+window.onscroll = function () {
+    scrollFunction();
+  };
+
 function backToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
 
 mybutton.addEventListener("click", backToTop);
+
+///////////obsługa formularza kontaktowego///////////////////
+
+function sendMessage(){
+    jQuery.ajax({
+        type: "POST",
+        url: "php/sendMail.php",
+        data:'userNick='+$("#userNick").val()+
+        '&emailAdressUser='+$("#emailAdressUser").val()+
+        '&phoneNumber='+$("#phoneNumber").val()+
+        '&messageContent='+$("messageContent").val(),
+        success: function (response) {
+            $(".status").html(response)
+        },
+        error: function(){
+        }
+    });
+}
 

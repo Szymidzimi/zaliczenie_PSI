@@ -165,11 +165,11 @@
       <div class="col-md-10">
         <form action="">
           <div class="inputs">
-            <input type="text" placeholder="Imie">
-            <input type="number" placeholder="numer tel.">
+            <input type="text" placeholder="Imie" id="userNick" required>
+            <input type="number" placeholder="numer tel." id="phoneNumber" required>
           </div>
           <div class="inputs">
-            <input type="email" placeholder="email">
+            <input type="email" placeholder="email" id="emailAdressUser" required>
             <select>
               <option value="" disabled selected>Wybierz pore dnia</option>
               <option value="9:00-12:00">9:00-12:00</option>
@@ -177,10 +177,13 @@
               <option value="14:30-17:00">14:30-17:00</option>
               <option value="17:00-19:00">17:00-19:00</option>
             </select>
+            
           </div>
-          <textarea name="" id="" cols="40" rows="10" placeholder="Treść twojej wiadomosci"></textarea>
-          <input type="submit" value="Wyślij" class="button">
+          <textarea name="" id="messageContent" cols="40" rows="10" placeholder="Treść twojej wiadomosci" required></textarea>
+        
+          <button name="submit" class="button" onClick="sendMessage()">Wyślij</button>
           
+          <div class="status"></div>
         </form>
       </div>
     </div>
@@ -242,7 +245,8 @@
 <button type="button" id="btn-back-to-top"><i class="fas fa-chevron-circle-up"></i></button>
 <!-- scripts -->
 <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+</script>
 <script src="js/script.js"></script>
 </body>
 </html>
