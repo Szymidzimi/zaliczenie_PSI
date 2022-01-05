@@ -92,7 +92,6 @@ function backToTop() {
 mybutton.addEventListener("click", backToTop);
 
 ///////////obsługa formularza kontaktowego///////////////////
-
 function sendMessage(){
     jQuery.ajax({
         type: "POST",
@@ -105,7 +104,7 @@ function sendMessage(){
             $(".status").html(response)
         },
         error: function(){
-            $(".status").html("sie zesrało")
+            $(".status").html("Nie udało sie")
         }
     });
 }
