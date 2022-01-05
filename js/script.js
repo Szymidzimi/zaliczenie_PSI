@@ -91,7 +91,7 @@ function backToTop() {
 
 mybutton.addEventListener("click", backToTop);
 
-///////////obsługa formularza kontaktowego///////////////////
+/////////obsługa formularza kontaktowego///////////////////
 // function sendMessage(){
 //     $.ajax({
 //         type: "POST",
