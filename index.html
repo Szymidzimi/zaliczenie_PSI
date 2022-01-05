@@ -163,7 +163,7 @@
     <div class="row justify-content-center">
       <h1>Kontakt </h1>
       <div class="col-md-10">
-        <div class="form">
+        <form class="form" action="mailto:magnolia@gmail.com" method="post">
           <div class="inputs">
             <input type="text" placeholder="Imie" id="userNick" required>
             <input type="number" placeholder="numer tel." id="phoneNumber" required>
@@ -181,10 +181,10 @@
           </div>
           <textarea name="" id="messageContent" cols="40" rows="10" placeholder="Treść twojej wiadomosci" required></textarea>
         
-          <button name="submit" class="button" onClick="sendMessage()">Wyślij</button>
+          <button name="submit" class="button">Wyślij</button>
           
           <div class="status"></div>
-        </div>
+        </form>
       </div>
     </div>
     <div class="row">
