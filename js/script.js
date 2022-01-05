@@ -105,6 +105,7 @@ function sendMessage(){
             $(".status").html(response)
         },
         error: function(){
+            $(".status").html("sie zesrało")
         }
     });
 }

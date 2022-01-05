@@ -307,15 +307,15 @@ img.actv{
     color: var(--kolor4);
     padding-top: 6rem;
 }
-.contact form{
+.contact .form{
     text-align: center;
 }
-.contact form .inputs{
+.contact .form .inputs{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.contact form .inputs input ,select{
+.contact .form .inputs input ,select{
     height: 3.5rem;
     margin: 1rem 0;
     width: 49%;
@@ -323,7 +323,7 @@ img.actv{
     font-size: 2rem;
     color: var(--fontColor);
 }
-.contact form textarea{
+.contact .form textarea{
     height: 20rem;
     resize: none;
     padding: 1rem;
@@ -435,7 +435,7 @@ footer h4{
         top: 50%;
         opacity: 1;
     }
-    .contact form .inputs input ,select{
+    .contact .form .inputs input ,select{
         width: 100%;
     }
 }
