@@ -93,15 +93,15 @@ mybutton.addEventListener("click", backToTop);
 
 ///////////obsługa formularza kontaktowego///////////////////
 function sendMessage(){
-    jQuery.ajax({
+    $.ajax({
         type: "POST",
         url: "sendMail.php",
         data:'userNick='+$("#userNick").val()+
         '&emailAdressUser='+$("#emailAdressUser").val()+
         '&phoneNumber='+$("#phoneNumber").val()+
         '&messageContent='+$("messageContent").val(),
-        success: function (response) {
-            $(".status").html(response)
+        success: function (data) {
+            $(".status").html(data)
         },
         error: function(){
             $(".status").html("Nie udało sie")
