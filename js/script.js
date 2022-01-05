@@ -96,7 +96,7 @@ mybutton.addEventListener("click", backToTop);
 function sendMessage(){
     jQuery.ajax({
         type: "POST",
-        url: "php/sendMail.php",
+        url: "sendMail.php",
         data:'userNick='+$("#userNick").val()+
         '&emailAdressUser='+$("#emailAdressUser").val()+
         '&phoneNumber='+$("#phoneNumber").val()+
