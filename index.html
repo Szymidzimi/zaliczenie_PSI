@@ -163,13 +163,13 @@
     <div class="row justify-content-center">
       <h1>Kontakt </h1>
       <div class="col-md-10">
-        <form class="form" action="mailto:magnolia@gmail.com" method="post">
+        <form class="form">
           <div class="inputs">
-            <input type="text" placeholder="Imie" id="userNick" required>
+            <input type="text" name="name" placeholder="Imie" id="userNick" required>
             <input type="number" placeholder="numer tel." id="phoneNumber" required>
           </div>
           <div class="inputs">
-            <input type="email" placeholder="email" id="emailAdressUser" required>
+            <input type="email" name="email" placeholder="email" id="emailAdressUser" required>
             <select>
               <option value="" disabled selected>Wybierz pore dnia</option>
               <option value="9:00-12:00">9:00-12:00</option>
@@ -179,9 +179,9 @@
             </select>
             
           </div>
-          <textarea name="" id="messageContent" cols="40" rows="10" placeholder="Treść twojej wiadomosci" required></textarea>
+          <textarea type="text" name="message" id="messageContent" cols="40" rows="10" placeholder="Treść twojej wiadomosci" required></textarea>
         
-          <button name="submit" class="button">Wyślij</button>
+          <button type="submit" class="button">Wyślij</button>
           
           <div class="status"></div>
         </form>

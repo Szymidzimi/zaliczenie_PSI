@@ -65,6 +65,21 @@ $(document).ready(function(){
             $('header').removeClass('header-act');
         }
     });
+    $('.form').on('submit', function(e) {
+        e.preventDefault();
+        $.ajax({
+            method: 'POST',
+            url: 'https://formsubmit.co/ajax/szymcio5130@gmail.com',
+            dataType: 'json',
+            accepts: 'application/json',
+            data: {
+                name:'Nowa waidomosc ze stronki',
+                message: 'przesłano'
+            },
+            success: (data) => console.log(data),
+            error: (err) => console.log(err)
+        });
+    });
 });
 /////////////////////////////////////////data///////////////////////////////
 const currentYr=new Date().getFullYear();
@@ -90,5 +105,3 @@ function backToTop() {
   }
 
 mybutton.addEventListener("click", backToTop);
-
-
