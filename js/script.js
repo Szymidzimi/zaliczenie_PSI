@@ -5,49 +5,6 @@ const next=document.querySelector('.nextt');
 const copyRight=document.querySelector('#copyright');
 const mybutton = document.querySelector("#btn-back-to-top");
 
-//////////////////////slider/////////////////////
-let krok=0;
-let koniec=imgs.length;
-
-let slider=()=>{
-    for(let i=0;i<koniec;i++){
-        imgs[i].classList.remove('actv');
-    }
-}
-//przyciski
-next.addEventListener('click',()=>{
-    krok++;
-    krok>=koniec? krok=0:null;
-    slider();
-    imgs[krok].classList.add('actv');
-})
-prov.addEventListener('click',()=>{
-    krok--;
-    krok<0? krok=koniec-1:null;
-    slider();
-    imgs[krok].classList.add('actv');
-})
-//automat
-setInterval(()=>{
-    krok++;
-    krok>=koniec? krok=0:null;
-    slider();
-    imgs[krok].classList.add('actv');
-},4000)
-/////////////////////////////////// zmiana motywu na ciemnmy///////////////////////////
-theme.addEventListener('click',()=>{
-    document.body.classList.toggle('dark-theme');
-    if(theme.classList.contains('fa-toggle-on')){
-        theme.classList.remove('fa-toggle-on');
-        theme.classList.add('fa-toggle-off');
-    }
-    else{
-        theme.classList.remove('fa-toggle-off');
-        theme.classList.add('fa-toggle-on');
-    }
-})
-
-//////////////////////////menu zwijalne oraz reakcja na scroll jQuerry////////////////////////////
 $(document).ready(function(){
     $('.fa-bars').click(function(){
         $(this).toggleClass('fa-times');
@@ -86,11 +43,48 @@ $(document).ready(function(){
         });
     });
 });
-/////////////////////////////////////////data///////////////////////////////
-const currentYr=new Date().getFullYear();
-copyRight.textContent=currentYr;
 
-/////////////////////////////////////przycisk up//////////////////////////
+let krok=0;
+let koniec=imgs.length;
+
+let slider=()=>{
+    for(let i=0;i<koniec;i++){
+        imgs[i].classList.remove('actv');
+    }
+}
+
+next.addEventListener('click',()=>{
+    krok++;
+    krok>=koniec? krok=0:null;
+    slider();
+    imgs[krok].classList.add('actv');
+})
+prov.addEventListener('click',()=>{
+    krok--;
+    krok<0? krok=koniec-1:null;
+    slider();
+    imgs[krok].classList.add('actv');
+})
+
+setInterval(()=>{
+    krok++;
+    krok>=koniec? krok=0:null;
+    slider();
+    imgs[krok].classList.add('actv');
+},4000)
+
+theme.addEventListener('click',()=>{
+    document.body.classList.toggle('dark-theme');
+    if(theme.classList.contains('fa-toggle-on')){
+        theme.classList.remove('fa-toggle-on');
+        theme.classList.add('fa-toggle-off');
+    }
+    else{
+        theme.classList.remove('fa-toggle-off');
+        theme.classList.add('fa-toggle-on');
+    }
+})
+
 function scrollFunction() {
   if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600){
     mybutton.style.display = "block";
@@ -110,3 +104,6 @@ function backToTop() {
   }
 
 mybutton.addEventListener("click", backToTop);
+
+const currentYr=new Date().getFullYear();
+copyRight.textContent=currentYr;
