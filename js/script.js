@@ -73,11 +73,16 @@ $(document).ready(function(){
             dataType: 'json',
             accepts: 'application/json',
             data: {
-                name:'Nowa waidomosc ze stronki',
-                message: 'przesłano'
+                email:$("#emailAdressUser").val(),
+                name: $("#userNick").val(),
+                message: $("#messageContent").val(),
             },
-            success: (data) => console.log(data),
-            error: (err) => console.log(err)
+            success: function (data) {
+                $(".status").html('<span class="ok">Wiadomość przesłana poprawnie</span>')
+            },
+            error: function(){
+                $(".status").html('<span class="bad">Wiadomość przesłana NIE poprawnie</span>')
+            }
         });
     });
 });

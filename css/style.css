@@ -396,7 +396,25 @@ footer h4{
 #btn-back-to-top:hover{
     color: red;
 }
-
+.status{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+.status .ok{
+    border-radius: 120px;
+    color: white;
+    font-size: 1.5rem;
+    width: 50%;
+    box-shadow:  0 5px 50px 0 green inset, 0 5px 50px 0 green;
+}
+.status .bad{
+    border-radius: 120px;
+    color: white;
+    font-size: 1.5rem;
+    width: 50%;
+    box-shadow:  0 5px 50px 0 red inset, 0 5px 50px 0 red;
+}
 /* media */
 @media(max-width:768px){
     html{
