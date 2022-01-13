@@ -400,6 +400,7 @@ footer h4{
     display: flex;
     align-items: center;
     justify-content: center;  
+    margin-bottom: 1rem;
 }
 .status .ok{
     border-radius: 120px;
