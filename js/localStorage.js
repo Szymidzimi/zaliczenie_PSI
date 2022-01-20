@@ -17,7 +17,7 @@ const getData = () => {
     return record;
 };
 
-const displayAlert = mgs => {
+const statusFunction = mgs => {
     const el = document.createElement("span");
     el.classList.add('ok');
     el.textContent = mgs;
@@ -36,7 +36,7 @@ const completedForm = () => {
             }
         }
         const mgs = "Uzupełniono o zapisane dane!";
-        displayAlert(mgs);
+        statusFunction(mgs);
     }
 };
 buttonToSave.addEventListener('click', e => {
@@ -44,7 +44,7 @@ buttonToSave.addEventListener('click', e => {
     record = getData();
     localStorage.setItem(formIdentifier, JSON.stringify(record[formIdentifier]));
     const mgs = "Dane z formularza zapisano!";
-    displayAlert(mgs);
+    statusFunction(mgs);
 });
 
 document.onload = completedForm();
