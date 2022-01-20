@@ -35,10 +35,10 @@ $(document).ready(function(){
                 message: $("#messageContent").val(),
             },
             success: function (data) {
-                $(".status").html('<span class="ok">Wiadomość przesłana poprawnie</span>')
+                $(".status").html('<span class="ok">Wiadomość przesłana poprawnie</span>');
             },
             error: function(){
-                $(".status").html('<span class="bad">Wiadomość przesłana NIE poprawnie</span>')
+                $(".status").html('<span class="bad">Wiadomość przesłana NIE poprawnie</span>');
             }
         });
     });

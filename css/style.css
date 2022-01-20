@@ -403,18 +403,22 @@ footer h4{
     margin-bottom: 1rem;
 }
 .status .ok{
-    border-radius: 120px;
-    color: white;
+    width: 80%;
+    margin: 2rem auto;
+    background-color: #ade9bb;
     font-size: 1.5rem;
-    width: 50%;
-    box-shadow:  0 5px 50px 0 green inset, 0 5px 50px 0 green;
+    color: #155724;
+    padding: 0.75rem 1.25rem;
+    border-radius: 2rem;
 }
 .status .bad{
-    border-radius: 120px;
-    color: white;
+    width: 80%;
+    margin: 2rem auto;
+    background-color: #d35d67;
     font-size: 1.5rem;
-    width: 50%;
-    box-shadow:  0 5px 50px 0 red inset, 0 5px 50px 0 red;
+    color: #ff0000;
+    padding: 0.75rem 1.25rem;
+    border-radius: 2rem;
 }
 /* media */
 @media(max-width:768px){
