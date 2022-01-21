@@ -15,6 +15,7 @@ const getData = () => {
     }
     return record;
 };
+
 const statusFunction = mgs => {
     const el = document.createElement("span");
     el.classList.add('ok');
