@@ -1,5 +1,4 @@
-const url = location.href;
-const formIdentifier = `${url}form`;
+const userDataId = 'userDataId';
 const buttonToSave = document.querySelector("#save");
 const statusDiv = document.querySelector(".status");
 let form = document.querySelector('.form');
@@ -7,16 +6,15 @@ let formElements = form.elements;
 
 const getData = () => {
     let record = {
-        [formIdentifier]: {}
+        [userDataId]: {}
     };
     for (const element of formElements) {
         if (element.name.length > 0) {
-            record[formIdentifier][element.name] = element.value;
+            record[userDataId][element.name] = element.value;
         }
     }
     return record;
 };
-
 const statusFunction = mgs => {
     const el = document.createElement("span");
     el.classList.add('ok');
@@ -28,8 +26,8 @@ const statusFunction = mgs => {
 };
 //wprowadza zapamętane dane
 const completedForm = () => {
-    if (localStorage.key(formIdentifier)) {
-        const sData = JSON.parse(localStorage.getItem(formIdentifier));
+    if (localStorage.key(userDataId)) {
+        const sData = JSON.parse(localStorage.getItem(userDataId));
         for (const element of formElements) {
             if (element.name in sData) {
                 element.value = sData[element.name];
@@ -42,7 +40,7 @@ const completedForm = () => {
 buttonToSave.addEventListener('click', e => {
     e.preventDefault();
     record = getData();
-    localStorage.setItem(formIdentifier, JSON.stringify(record[formIdentifier]));
+    localStorage.setItem(userDataId, JSON.stringify(record[userDataId]));
     const mgs = "Dane z formularza zapisano!";
     statusFunction(mgs);
 });
